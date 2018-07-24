@@ -1,16 +1,35 @@
-<form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<div class="div1">
+<div class="container">
+    <form #myForm = "ngForm" (ngSubmit) = "MyFun(myForm.value)">
+      <div class="form-group">
+        <label>Email address</label>
+        <input type="email"  #email="ngModel" ngModel [(ngModel)] = "Email" required name = "email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+        <div *ngIf = "email.errors">
+          <p class="text-danger" *ngIf = "email.errors.required && email.touched">Email Is re</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" #password="ngModel" ngModel [(ngModel)] = "Password" required name="password" class="form-control" placeholder="Password">
+        <div *ngIf = "password.errors">
+          <p class="text-danger" *ngIf = "password.errors.required && password.touched">Password Is re</p>
+        </div>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" #check = "ngModel" ngModel required name="check" class="form-check-input">
+        <label class="form-check-label">Check me out</label>
+      </div>
+      <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">Submit</button>
+      
+    </form>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="https://www.facebook.com/kunwarpawan.singh.9?hc_ref=ARSShhOcor2Lh2LuX1jb-mxLbP57ZM7hZ6TysI3UCqWYUYPO4T9bb13vNITPqjaaInI" data-width="10px" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
