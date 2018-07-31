@@ -20,7 +20,9 @@
         <label class="form-check-label">Check me out</label>
       </div>
       <button type="submit" [disabled]="myForm.invalid" class="btn btn-primary">Submit</button>
-      
+
     </form>
+    <button (click) = "test()" class="btn btn-primary">Test</button>
+    <router-outlet></router-outlet>
   </div>
 </div>

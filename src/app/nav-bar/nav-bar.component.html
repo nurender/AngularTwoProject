@@ -6,7 +6,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
   </ol>
 
-  
+
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="d-block w-100" src="..\assets\3848765-wallpaper-images-download.jpg" alt="First slide">
@@ -47,6 +47,15 @@
       <li class="nav-item">
         <a class="nav-link" routerLink = "NgIf">NgIfCreate</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink = "switch">Switch</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink = "input">Input</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink = "form">Form</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
@@ -76,4 +85,7 @@
   </ul>
   </div>
 </nav>
+<h1 [ngStyle] = "{'color' : 'red', 'text-align' : 'center'}">
+  {{Bishnoi}}
+</h1>
 <router-outlet></router-outlet>

@@ -17,11 +17,16 @@ import { CustomComponent } from './custom/custom.component';
 import { MyNgIfDirective } from './my-ng-if.directive';
 import { NgIfCreateComponent } from './ng-if-create/ng-if-create.component';
 import { HomeComponent } from './home/home.component';
+import { SwitchComponent } from './switch/switch.component';
+import { InputComponent } from './input/input.component';
+import { NgcontentComponent } from './ngcontent/ngcontent.component';
+import { FormComponent } from './form/form.component';
 
  let routes : Routes = [
   {
     path : "login",
-    component: LoginComponent
+    component: LoginComponent,
+    children:[{path :'test',component:PostsComponent },{path :'post',component:PostsComponent}]
   },
   {
     path : "posts",
@@ -46,6 +51,18 @@ import { HomeComponent } from './home/home.component';
   {
     path : "home",
     component: HomeComponent
+  },
+  {
+    path: "switch",
+    component: SwitchComponent
+  },
+  {
+    path: "form",
+    component: FormComponent
+  },
+  {
+    path : "input",
+    component: InputComponent
   }
 ]
 
@@ -61,7 +78,11 @@ import { HomeComponent } from './home/home.component';
     CustomComponent,
     MyNgIfDirective,
     NgIfCreateComponent,
-    HomeComponent
+    HomeComponent,
+    SwitchComponent,
+    InputComponent,
+    NgcontentComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar',
@@ -11,5 +11,7 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @Input() public Bishnoi;
 
 }

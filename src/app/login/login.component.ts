@@ -12,21 +12,21 @@ export class LoginComponent  {
   constructor(
     private router: Router,
     private ar: ActivatedRoute,
-    private http : HttpClient
+    private http: HttpClient
   ) { }
 
-  MyFun(form){
+  MyFun(form) {
     this.http.post<any>('https://piet-login-app.herokuapp.com/user/login',{
       email: form.email,
       password: form.name
-    }).subscribe(res=>{
-      if(res.success){
-        window.alert(res.msg);
-        this.router.navigate(['/dashboard'])
-      } else{
-        window.alert(res.msg)
-      }
-    })
+    }).subscribe(res => {
+      console.log(res);
+
+    } )
+  }
+
+  test() {
+    this.router.navigate(['test'], {relativeTo: this.ar});
   }
 
 }

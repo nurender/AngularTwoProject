@@ -1,13 +1,15 @@
 <div class="container">
+  <h1> Email & Password value print consol. </h1>
+  <br><br>
   <form>
     <div class="form-group">
       <label for="exampleInputEmail1">Email address</label>
       <input type="email" class="form-control" #email placeholder="Enter email">
     </div>
     <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label>
-      <input type="email" class="form-control" #email1 placeholder="Enter email">
+      <label for="exampleInputEmail1">Password</label>
+      <input type="password" class="form-control" #password placeholder="Enter email">
     </div>
-    <button type="submit" (click) = "myfun(email.value , email1.value)" class="btn btn-primary">Submit</button>
+    <button type="submit" (click) = "myfun(email.value , password.value)" class="btn btn-primary">Submit</button>
   </form>
 </div>

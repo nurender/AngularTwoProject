@@ -1,0 +1,33 @@
+<div class="container">
+  <h1 [ngStyle]="{'color' : color}">
+    Nurender
+  </h1><br><br>
+
+  Enter The Color
+  <input type="text" name="" [(ngModel)] = "color"><br><br>
+
+
+  <div [ngSwitch] = "color">
+
+    <div *ngSwitchCase = "'red'">
+      Color Is {{color}}
+    </div>
+    <div *ngSwitchCase = "'blue'">
+      Color Is {{color}}
+    </div>
+    <div *ngSwitchCase = "'gold'">
+      Color Is {{color}}
+    </div>
+    <div *ngSwitchCase = "'yellow'">
+      Color Is {{color}}
+    </div>
+    <div *ngSwitchCase = "'green'">
+      Color Is {{color}}
+    </div>
+    <div *ngSwitchDefault>
+      Color Is ?
+    </div>
+    
+
+  </div>
+</div>

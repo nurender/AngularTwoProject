@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  myfun(email , email1){
+  myfun(email , password){
     console.log(email);
-    console.log(email1);
+    console.log(password);
     
     
   }
